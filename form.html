@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/css/style2.css" class="rel">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="main">
+            <div class="card">
+                <div class="front">
+                    <form action="">
+                        <h3 class="text-center open">login here</h3>
+                        <label for="">E-mail Address</label>
+                        <input type="email" id="myMessage" name="" id="" placeholder="enter your e-mail" required>
+                        <label for="">password</label>
+                        <input type="password" name="" id="mypassword" placeholder="password">
+                        <a href="javascript:void(0)" id="submit" class="btn text-center" style="display:block;">log in</a> 
+                        <div class="social">
+                            <div class="go"><i class="fab fa-google"></i> Google</div>
+                            <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="back">
+                    <h3 class="text-center">form submitted</h3>
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="pop-up one">
+<div class="icon">
+    <i class="fa-solid fa-xmark close"></i>
+</div>
+<h4>Please Enter your Email</h4>
+</div>
+<div class="pop-up two">
+    <div class="icon">
+        <i class="fa-solid fa-xmark close"></i>
+    </div>
+    <h4>Please Enter your Password</h4>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#submit').click(function () {
+                if ($('#myMessage').val() == '') {
+                    $(".one").addClass("visible");
+                }
+                else if
+                ($('#mypassword').val() == '') {
+                    $(".two").addClass("visible");
+                }
+                else
+                {
+                   $(".card").addClass("rotate");
+                }
+            });
+            $(".close").click(function(){
+                $(".pop-up").removeClass("visible");
+                $(".pop-up").css("transition","all 0.5s linear");
+            });
+
+            $("#myMessage").click(function(){
+                $(".pop-up").removeClass("visible");
+                $(".pop-up").css("transition","all 0.5s linear");
+            });
+            $("#mypassword").click(function(){
+                $(".pop-up").removeClass("visible");
+                $(".pop-up").css("transition","all 0.5s linear");
+            });
+        });
+    </script>
+</body>
+
+</html>

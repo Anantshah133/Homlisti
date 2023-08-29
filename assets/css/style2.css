@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #080710;
+}
+
+.br{
+    border: 2px solid red;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+h3{
+    text-transform: capitalize;
+    font-size: 36px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    line-height: 42px;
+}
+
+
+.main{
+    position: relative;
+    perspective: 1000px;
+}
+.main::after{
+    content: "";
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(#1845ad,#23a2f6);
+    left: -80px;
+    top: -80px;
+    z-index: -5;    
+}
+.main::before{
+    content: "";
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to right,#ff512f,#f09819);
+    right: -30px;
+    bottom: -80px;
+    z-index: -5;
+}
+
+
+.card{
+    transform-style: preserve-3d;   
+    transition: all 0.7s linear;
+}
+
+.front{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    height: 570px;
+    width: 400px;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    padding: 50px 35px;
+}
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding:20px;
+}
+
+
+.back h3{
+    margin-top: 100px;
+}
+
+.back i{
+    font-size: 120px;
+    text-align: center;
+    display: block;
+    margin-top: 100px;
+    color: lightgreen;
+    /* animation:rotate 2s linear 1; */
+    /* animation-delay: 5s; */
+}
+
+@keyframes rotate{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+label{
+    display: block;
+    margin-top: 35px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 300;
+    border: none;
+}
+
+::placeholder{
+    color: #bdbdbd;
+}
+
+
+.btn{
+    margin-top:40px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+
+.social{
+    margin-top: 40px;
+    display: flex;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 8px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+  cursor: pointer;
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+
+
+.rotate{
+    transform: rotateY(180deg);
+}
+ 
+.pop-up
+{
+    width: 300px;
+    height: 100px;  
+    position: absolute;
+    top: -300px;
+    left: 50%;
+    transform: translate(-50%,50%);
+    border-radius: 10px;
+} 
+.one{
+    background: linear-gradient(to right,#ff512f,#f09819,0.01);
+    backdrop-filter: blur(200px);
+}
+.two
+{
+    background: linear-gradient(to right,#ff512f,#f09819,0.01);
+    backdrop-filter: blur(200px);
+}
+
+.visible{
+    visibility: visible;
+    transition: all 0.5s linear;
+    top: 0px;
+}
+h4{
+    clear: right;
+    text-align: center;
+    margin-top: 35px;
+    color:linear-gradient(to right,#ff512f,#f09819);
+}
+
+.icon i{
+    float: right;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-right:10px;
+}
